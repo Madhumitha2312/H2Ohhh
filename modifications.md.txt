@@ -1,61 +1,22 @@
-Read the existing implementation completely before making any changes.
-
-IMPORTANT
+Read the existing Electron + React project completely before making any changes.
 
 Do NOT modify the UI.
-
-Do NOT modify the reminder design.
-
-Do NOT modify the dashboard.
-
+Do NOT modify reminders.
 Do NOT modify animations.
+Do NOT modify Electron functionality.
 
-Do NOT modify the reminder position.
+I want to deploy only the React frontend to Vercel.
 
-Do NOT modify Electron windows.
+Please:
 
-Do NOT modify videos.
-
-Do NOT modify timers.
-
-Do NOT modify any working functionality.
-
-The reminder UI is working perfectly.
-
-The ONLY issue is that the voice reminder is not playing.
-
-Fix ONLY the voice.
-
-Requirements:
-
-1. When the reminder appears, play the notification sound first.
-
-2. After approximately 300ms, automatically speak:
-
-"Hey {name}! It's time to take a sip."
-
-3. Use the Web Speech API (window.speechSynthesis).
-
-4. Wait until speechSynthesis voices are loaded before speaking.
-
-5. Stop any previous speech before starting a new one.
-
-Example:
-
-speechSynthesis.cancel();
-
-6. If voices are not immediately available, wait for the "voiceschanged" event before calling speak().
-
-7. Use a natural English voice if available.
-
-8. If no preferred voice exists, automatically fall back to the default system voice.
-
-9. Do not require any user interaction before speaking.
-
-10. Cancel speech when the reminder is dismissed.
-
-11. Handle browser and Electron compatibility correctly.
-
-12. Add console logging if speech fails so the error can be diagnosed.
-
-Do not modify anything except the voice reminder.
+1. Separate the React renderer into a standalone Vite web application.
+2. Keep the Electron desktop application unchanged.
+3. Create a proper build script that outputs a standard "dist" folder.
+4. Ensure npm run build generates the React production build for Vercel.
+5. Preserve all pages (Landing, Login, Signup, Dashboard, Settings).
+6. Remove only Electron-specific dependencies from the web build.
+7. Do not change the UI or styling.
+8. After finishing, tell me:
+   - Build Command
+   - Output Directory
+   - Vercel settings
