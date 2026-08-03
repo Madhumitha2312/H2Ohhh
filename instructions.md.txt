@@ -1,0 +1,1961 @@
+# H2Ohhh - AI Development Instructions
+
+## Project Name
+H2Ohhh
+
+## Tagline
+Turning Sips Into Streaks
+
+---
+
+## Project Goal
+
+Build a beautiful desktop hydration reminder application.
+
+The application should remind users to drink water while they are working on their computer.
+
+The application should look modern, premium and minimal.
+
+Every feature should be implemented cleanly.
+
+Never overcomplicate the code.
+
+Follow React best practices.
+
+---
+
+## Tech Stack
+
+React
+
+TypeScript
+
+Vite
+
+Tailwind CSS
+
+Electron
+
+Node.js
+
+---
+
+## UI Theme
+
+Blue
+
+White
+
+Cyan Gradient
+
+Glassmorphism
+
+Rounded corners
+
+Soft shadows
+
+Smooth animations
+
+Premium typography
+
+Minimal design
+
+---
+
+## Folder Structure
+
+Use scalable folder architecture.
+
+Separate
+
+components
+
+pages
+
+hooks
+
+services
+
+assets
+
+utils
+
+types
+
+---
+
+## Coding Rules
+
+Write reusable components.
+
+Keep files organized.
+
+Avoid duplicate code.
+
+Write readable code.
+
+Use TypeScript everywhere.
+
+Follow clean architecture.
+
+---
+
+# TASK 1
+
+Create the project structure only.
+
+Initialize
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+Electron
+
+Do not build any screens.
+
+Do not build any features.
+
+Only prepare the project.
+
+
+
+# TASK 2
+
+Create a beautiful landing page.
+
+Theme:
+Minimal
+Premium
+Blue
+White
+Glassmorphism
+
+Application Name:
+H2Ohhh
+
+Tagline:
+Turning Sips Into Streaks
+
+Description:
+Your personal hydration companion that reminds you to drink water, tracks your daily intake, and helps you build healthy hydration habits.
+
+Design Requirements:
+
+- Centered layout
+- Beautiful water drop illustration
+- Animated background blobs
+- Glassmorphism card
+- Rounded corners
+- Premium typography
+- Gradient heading
+- Smooth hover animations
+- Responsive design
+
+Buttons:
+
+Primary:
+Get Started
+
+Secondary:
+Learn More
+
+Navigation:
+
+Logo
+About
+Features
+Contact
+
+Footer:
+
+Made with ❤️ for healthy hydration.
+
+Do not create the dashboard.
+
+Clicking Get Started should navigate to a placeholder Setup page.
+
+Only build the landing page.
+
+
+# TASK 3
+
+Create a beautiful onboarding page that opens after clicking "Get Started".
+
+This page should collect the user's preferences before entering the dashboard.
+
+--------------------------------
+
+STEP 1
+Welcome Card
+
+Heading
+
+Welcome to H2Ohhh 💧
+
+Text
+
+Let's personalize your hydration journey.
+
+Button
+
+Continue
+
+--------------------------------
+
+STEP 2
+
+Ask user's name
+
+Placeholder
+
+Enter your name
+
+Example
+
+Sam
+
+Validation
+
+Cannot continue if empty.
+
+--------------------------------
+
+STEP 3
+
+Select Gender
+
+Cards
+
+👩 Female
+
+👨 Male
+
+Only one can be selected.
+
+--------------------------------
+
+STEP 4
+
+Daily Water Goal
+
+Options
+
+1500 ml
+
+2000 ml
+
+2500 ml
+
+3000 ml
+
+3500 ml
+
+Or Custom Input
+
+--------------------------------
+
+STEP 5
+
+Reminder Interval
+
+Options
+
+Every 30 Minutes
+
+Every 45 Minutes
+
+Every 1 Hour
+
+Every 2 Hours
+
+--------------------------------
+
+STEP 6
+
+Notification Sound
+
+Dropdown
+
+Water Drop
+
+Ocean
+
+Bell
+
+None
+
+--------------------------------
+
+STEP 7
+
+Character Theme
+
+Friendly Girl
+
+Friendly Boy
+
+Cute Water Drop
+
+Minimal Bubble
+
+Preview the selected character.
+
+--------------------------------
+
+STEP 8
+
+Summary Screen
+
+Display
+
+Name
+
+Gender
+
+Water Goal
+
+Reminder Interval
+
+Character
+
+Buttons
+
+Back
+
+Start My Journey
+
+When the user clicks "Start My Journey",
+
+save all information locally
+
+then navigate to Dashboard.
+
+Use Local Storage for now.
+
+No backend yet.
+
+Create a premium multi-step wizard with
+
+smooth animations
+
+progress indicator
+
+glassmorphism
+
+rounded cards
+
+beautiful transitions.
+
+Only implement Task 3.
+
+
+# TASK 4
+
+Create the main dashboard.
+
+The dashboard should feel like a premium wellness application.
+
+------------------------------------------------
+
+TOP HEADER
+
+Greeting
+
+Good Morning, Madhu ☀️
+
+or
+
+Good Afternoon
+
+or
+
+Good Evening
+
+based on current system time.
+
+Below greeting
+
+"Let's stay hydrated today."
+
+------------------------------------------------
+
+PROFILE CARD
+
+Show
+
+Selected Character
+
+User Name
+
+Today's Goal
+
+Reminder Interval
+
+Current Streak
+
+------------------------------------------------
+
+LARGE WATER PROGRESS CARD
+
+Circular Progress Ring
+
+Example
+
+1200 ml
+
+/
+
+3000 ml
+
+Percentage
+
+Big animated water wave.
+
+------------------------------------------------
+
+QUICK ACTIONS
+
++250 ml
+
++500 ml
+
++750 ml
+
++1000 ml
+
+When clicked
+
+Update progress
+
+Animate water level
+
+Save locally
+
+------------------------------------------------
+
+CUSTOM ENTRY
+
+Input field
+
+Drink Amount
+
+Button
+
+Add Water
+
+------------------------------------------------
+
+TODAY'S TIMELINE
+
+09:30
+
+250 ml
+
+10:45
+
+500 ml
+
+12:00
+
+250 ml
+
+Newest first.
+
+------------------------------------------------
+
+RIGHT PANEL
+
+Today's Goal
+
+Remaining Water
+
+Last Drink Time
+
+Estimated Next Reminder
+
+------------------------------------------------
+
+ACHIEVEMENTS
+
+Cards
+
+First Sip
+
+Half Goal
+
+Goal Completed
+
+3 Day Streak
+
+Hidden badges remain locked.
+
+------------------------------------------------
+
+BOTTOM SECTION
+
+Hydration Tip
+
+Example
+
+"Drinking enough water improves focus and energy."
+
+Randomize tips.
+
+------------------------------------------------
+
+Use smooth animations.
+
+Glassmorphism.
+
+Floating blobs.
+
+Blue gradients.
+
+Wave animation.
+
+Premium dashboard.
+
+Save everything using Local Storage.
+
+Do not implement desktop reminders yet.
+
+Do not implement notifications.
+
+Dashboard only.
+
+# TASK 5
+
+Implement the Desktop Hydration Reminder System.
+
+This is the signature feature of H2Ohhh.
+
+---------------------------------------
+
+REMINDER ENGINE
+
+Read reminder interval selected during onboarding.
+
+Start a timer after the dashboard loads.
+
+Supported intervals
+
+30 minutes
+
+45 minutes
+
+1 hour
+
+2 hours
+
+---------------------------------------
+
+REMINDER POPUP
+
+When the timer expires
+
+show a beautiful centered popup.
+
+The popup should appear above the application window.
+
+Backdrop blur.
+
+Glassmorphism.
+
+Rounded corners.
+
+Soft animation.
+
+---------------------------------------
+
+CHARACTER
+
+Display the selected character.
+
+Friendly Girl
+
+Friendly Boy
+
+Cute Water Drop
+
+Minimal Bubble
+
+Character should hold a glass of water.
+
+Character gently floats up and down.
+
+---------------------------------------
+
+MESSAGE
+
+Personalize using stored user name.
+
+Example
+
+Madhu,
+it's time to drink some water 💧
+
+Stay hydrated.
+Your body will thank you.
+
+---------------------------------------
+
+BUTTONS
+
+✅ I Drank Water
+
+😴 Snooze
+
+---------------------------------------
+
+WHEN USER CLICKS
+
+"I Drank Water"
+
+Automatically
+
+Add 250 ml
+
+Update dashboard
+
+Update progress ring
+
+Update timeline
+
+Reset reminder timer
+
+Close popup
+
+---------------------------------------
+
+WHEN USER CLICKS
+
+"Snooze"
+
+Ask
+
+Remind again in
+
+15 min
+
+30 min
+
+1 hour
+
+Restart timer
+
+Close popup
+
+---------------------------------------
+
+ANIMATIONS
+
+Popup fade
+
+Scale animation
+
+Floating character
+
+Water drop bounce
+
+Button hover
+
+Soft shadows
+
+Premium look
+
+---------------------------------------
+
+Store reminder timestamps locally.
+
+No desktop notification APIs yet.
+
+Simulate everything inside the application.
+
+Only implement Task 5.
+
+# TASK 6
+
+The Electron application is not runnable because the Electron entry files are missing.
+
+Create the complete Electron configuration.
+
+Requirements:
+
+- Create an `electron/` folder.
+- Add `main.ts`.
+- Add `preload.ts`.
+- Configure BrowserWindow correctly.
+- Load the Vite development server in development mode.
+- Load the built files in production mode.
+- Configure electron.vite.config.ts correctly.
+- Ensure `npm run dev` launches both the React application and the Electron desktop window.
+
+Do not modify the UI or application features.
+Only repair the Electron project structure so the application runs successfully.
+
+
+# TASK 7
+
+Integrate the avatar system into H2Ohhh.
+
+The avatar images are stored inside:
+
+src/renderer/src/assets/avatars/
+
+Automatically load the correct avatar based on the user's selected gender.
+
+Female
+
+- girl-casual.png
+- girl-office.png
+- girl-reminder.png
+
+Male
+
+- boy-casual.png
+- boy-reminder.png
+
+------------------------------------------------
+
+REMINDER EXPERIENCE
+
+When the reminder timer expires,
+
+the reminder should NOT appear as a normal popup.
+
+Instead,
+
+a floating assistant should slide in from the RIGHT edge of the application window.
+
+Animation
+
+- Slide from right
+- Ease Out animation
+- Slight bounce when stopping
+- Floating idle animation
+
+------------------------------------------------
+
+LAYOUT
+
+Avatar on the left.
+
+Speech bubble on the right.
+
+Example
+
+👧
+
++--------------------------------------+
+
+Hey Madhu! 💧
+
+You've been working for a while.
+
+Time to drink some water.
+
+[🥤 I Drank]
+
+[😴 Snooze]
+
++--------------------------------------+
+
+------------------------------------------------
+
+PERSONALIZED MESSAGES
+
+Randomly choose one message every reminder.
+
+Examples
+
+"Madhu, it's time for a sip 💧"
+
+"Hydration keeps your brain active."
+
+"Take a short break and drink water."
+
+"Your body is asking for water."
+
+"Stay refreshed."
+
+"Every sip counts."
+
+------------------------------------------------
+
+BUTTONS
+
+I Drank
+
+- Add 250 ml
+- Update dashboard
+- Close assistant
+- Restart reminder timer
+
+Snooze
+
+Options
+
+2 min
+
+5 min
+
+10 min
+
+15 min
+
+30 min
+
+1 hour
+
+Restart timer.
+
+------------------------------------------------
+
+TEST MODE
+
+Reminder interval should include
+
+2 Minutes
+
+5 Minutes
+
+10 Minutes
+
+15 Minutes
+
+30 Minutes
+
+45 Minutes
+
+1 Hour
+
+2 Hours
+
+------------------------------------------------
+
+The assistant should disappear smoothly after the action.
+
+Keep everything responsive and reusable.
+
+Only implement Task 7.
+
+# TASK 8
+
+## FEATURE
+
+Transform H2Ohhh into a Desktop Hydration Companion.
+
+The reminder should no longer feel like a popup inside the dashboard.
+
+Instead, it should feel like a virtual desktop assistant.
+
+------------------------------------------------
+
+## TEST MODE
+
+Add reminder intervals
+
+2 Minutes
+
+5 Minutes
+
+10 Minutes
+
+15 Minutes
+
+30 Minutes
+
+45 Minutes
+
+1 Hour
+
+2 Hours
+
+------------------------------------------------
+
+## DESKTOP ASSISTANT
+
+When the reminder timer expires,
+
+a floating assistant should slide in from the RIGHT edge of the application window.
+
+Animation
+
+• Start completely outside the window.
+
+• Slide smoothly into view.
+
+• Slight bounce when stopping.
+
+• Idle floating animation.
+
+• Soft shadow.
+
+• Glassmorphism speech bubble.
+
+------------------------------------------------
+
+## AVATAR
+
+Use images from
+
+src/renderer/src/assets/avatars
+
+Female
+
+girl-reminder.png
+
+Male
+
+boy-reminder.png
+
+Automatically select based on onboarding gender.
+
+Avatar should appear holding a glass of water.
+
+------------------------------------------------
+
+## SPEECH BUBBLE
+
+Bubble should appear ABOVE the avatar.
+
+Rounded corners.
+
+Glass effect.
+
+Soft fade animation.
+
+------------------------------------------------
+
+## RANDOM REMINDER MESSAGES
+
+Generate one random reminder every time.
+
+Examples
+
+"Hey {name}! 💧 Time for a sip."
+
+"You've been working hard. Stay hydrated."
+
+"Every sip helps your body."
+
+"Hydration improves focus."
+
+"Take a quick water break."
+
+"Keep your streak alive."
+
+"Your future self will thank you."
+
+"Small sip. Big impact."
+
+------------------------------------------------
+
+## BUTTONS
+
+🥤 I Drank Water
+
+😴 Snooze
+
+------------------------------------------------
+
+## I DRANK
+
+When clicked
+
+• Add 250 ml
+
+• Update dashboard immediately
+
+• Update progress ring
+
+• Update today's timeline
+
+• Update achievements
+
+• Play a tiny success animation
+
+• Show message
+
+"Awesome! 🎉"
+
+or
+
+"Great job!"
+
+or
+
+"Keep it up!"
+
+Assistant smiles and slides out.
+
+Restart reminder timer.
+
+------------------------------------------------
+
+## SNOOZE
+
+When clicked
+
+Show
+
+2 min
+
+5 min
+
+10 min
+
+15 min
+
+30 min
+
+1 hour
+
+Restart timer.
+
+Slide assistant away.
+
+------------------------------------------------
+
+## VISUAL EFFECTS
+
+• Floating water bubbles
+
+• Soft blue glow
+
+• Smooth fade
+
+• Tiny wave animation
+
+• Bubble tail pointing toward avatar
+
+• Spring animation
+
+• Drop shadow
+
+------------------------------------------------
+
+## DESKTOP WINDOW
+
+Assistant should always appear on top of the application UI.
+
+Do NOT cover the full screen.
+
+Assistant should occupy only the bottom-right corner.
+
+------------------------------------------------
+
+## ARCHITECTURE
+
+Create reusable components.
+
+Assistant.tsx
+
+SpeechBubble.tsx
+
+ReminderButtons.tsx
+
+ReminderAnimation.tsx
+
+AvatarLoader.ts
+
+ReminderMessages.ts
+
+------------------------------------------------
+
+Do not modify previous functionality.
+
+Only upgrade the reminder experience.
+
+# TASK 9
+
+Create the H2Ohhh Voice Companion.
+
+------------------------------------------------
+
+When the assistant appears,
+
+she should greet the user using text-to-speech.
+
+Use the browser SpeechSynthesis API.
+
+Do not use external APIs.
+
+------------------------------------------------
+
+Voice Examples
+
+"Hey {name}!
+
+It's time to drink some water."
+
+"Hydration improves your focus."
+
+"Take a quick sip."
+
+"You've been working hard."
+
+------------------------------------------------
+
+Choose one message randomly.
+
+Never repeat the same message twice in a row.
+
+------------------------------------------------
+
+When user clicks
+
+🥤 I Drank
+
+Assistant says
+
+"Great job!"
+
+or
+
+"Awesome!"
+
+or
+
+"Keep it up!"
+
+------------------------------------------------
+
+When Snooze
+
+Assistant says
+
+"Alright.
+
+I'll remind you later."
+
+------------------------------------------------
+
+SETTINGS
+
+Allow
+
+Voice On / Off
+
+Volume
+
+Rate
+
+Pitch
+
+Remember preferences.
+
+------------------------------------------------
+
+NATIVE DESKTOP NOTIFICATIONS
+
+Use Electron Notification API.
+
+When the app is minimized,
+
+show a Windows notification.
+
+Title
+
+💧 H2Ohhh
+
+Body
+
+"{name}, it's time to drink water."
+
+Clicking notification
+
+opens the application.
+
+------------------------------------------------
+
+SYSTEM TRAY
+
+When user closes app
+
+Do NOT exit.
+
+Minimize to tray.
+
+Tray Menu
+
+Open
+
+Pause Reminders
+
+Drink Water
+
+Settings
+
+Exit
+
+------------------------------------------------
+
+STARTUP
+
+Optional
+
+Allow
+
+Start with Windows
+
+------------------------------------------------
+
+Keep all existing features working.
+
+Implement only Task 9.
+
+
+# TASK 10
+
+Final Product Polish
+
+--------------------------------------------
+
+Create a premium desktop experience.
+
+--------------------------------------------
+
+SUCCESS ANIMATIONS
+
+When user clicks
+
+"I Drank"
+
+Show
+
+• Water splash animation
+
+• Progress ring animation
+
+• Tiny confetti
+
+• Floating "+250 ml"
+
+• Assistant smiles
+
+--------------------------------------------
+
+GOAL COMPLETED
+
+When daily goal reaches 100%
+
+Show celebration screen.
+
+Assistant says
+
+"Congratulations!
+
+You reached today's hydration goal!"
+
+Play celebration animation.
+
+Unlock badge.
+
+--------------------------------------------
+
+STREAK
+
+When user reaches
+
+3
+
+7
+
+15
+
+30
+
+50
+
+100
+
+day streaks
+
+Show beautiful badge popup.
+
+--------------------------------------------
+
+SOUNDS
+
+Soft water drop
+
+Glass clink
+
+Bubble sound
+
+Celebration
+
+Allow turning sounds ON/OFF.
+
+--------------------------------------------
+
+DARK MODE
+
+Create complete dark theme.
+
+Remember theme.
+
+--------------------------------------------
+
+SETTINGS
+
+Export hydration history as JSON.
+
+Reset progress.
+
+Change avatar.
+
+Change reminder interval.
+
+--------------------------------------------
+
+ANALYTICS
+
+Weekly chart
+
+Monthly chart
+
+Average intake
+
+Longest streak
+
+Hydration score
+
+Calendar
+
+--------------------------------------------
+
+EMPTY STATES
+
+Create beautiful illustrations.
+
+Example
+
+"No water entries today."
+
+--------------------------------------------
+
+RESPONSIVENESS
+
+Improve spacing
+
+Animations
+
+Transitions
+
+Accessibility
+
+Keyboard shortcuts
+
+--------------------------------------------
+
+Create production-quality UI.
+
+No new major features.
+
+Only polish.
+
+# TASK 10
+
+## OBJECTIVE
+
+Transform H2Ohhh into a true desktop companion.
+
+The reminder must no longer appear inside the React dashboard.
+
+Instead, create a separate transparent Electron overlay window that appears above other desktop applications.
+
+--------------------------------------------------
+
+OVERLAY WINDOW
+
+Create a dedicated Electron BrowserWindow.
+
+Properties
+
+- transparent: true
+- frame: false
+- alwaysOnTop: true
+- skipTaskbar: true
+- resizable: false
+- movable: false
+- focusable: true
+- hasShadow: false
+
+The overlay window should remain hidden until a reminder is triggered.
+
+--------------------------------------------------
+
+POSITION
+
+Display the overlay in the bottom-right corner of the primary display.
+
+Keep a small margin from the screen edges.
+
+--------------------------------------------------
+
+REMINDER FLOW
+
+When the reminder timer expires:
+
+1. Show the overlay window.
+2. Animate it sliding in from the right.
+3. Display the user's selected avatar.
+4. Show the reminder speech bubble.
+5. Play voice reminder if enabled.
+6. Keep the overlay visible until the user chooses an action.
+
+--------------------------------------------------
+
+ACTIONS
+
+🥤 I Drank
+
+- Add 250 ml.
+- Update hydration data.
+- Notify the dashboard.
+- Restart reminder timer.
+- Close the overlay.
+
+😴 Snooze
+
+Options
+
+2 min
+
+5 min
+
+10 min
+
+15 min
+
+30 min
+
+1 hour
+
+Restart timer.
+
+Hide overlay.
+
+--------------------------------------------------
+
+COMMUNICATION
+
+Use Electron IPC.
+
+The overlay and the dashboard must share hydration data.
+
+Updating water intake from the overlay must instantly update the dashboard.
+
+--------------------------------------------------
+
+BEHAVIOR
+
+The overlay must appear even if:
+
+- Chrome is open
+- VS Code is active
+- Microsoft Word is active
+- The dashboard window is minimized
+
+Do not show the overlay over exclusive full-screen games.
+
+--------------------------------------------------
+
+ANIMATIONS
+
+Slide in
+
+Bounce
+
+Fade
+
+Floating idle animation
+
+Smooth exit animation
+
+--------------------------------------------------
+
+CODE QUALITY
+
+Create reusable files.
+
+overlay/
+
+OverlayWindow.ts
+
+OverlayRenderer.tsx
+
+OverlaySpeechBubble.tsx
+
+OverlayButtons.tsx
+
+OverlayAvatar.tsx
+
+OverlayAnimations.ts
+
+--------------------------------------------------
+
+Do not remove any existing features.
+
+Only move the reminder experience from the dashboard to a native Electron desktop overlay.
+
+# TASK 11
+
+Implement User Authentication and Personal Dashboard.
+
+Authentication
+
+• Beautiful Login Page
+
+• Beautiful Signup Page
+
+• Glassmorphism UI
+
+• Blue gradient theme
+
+• Password visibility toggle
+
+• Remember Me
+
+• Forgot Password UI
+
+• Continue as Guest
+
+---------------------------------------
+
+Store user data.
+
+For MVP
+
+Use LocalStorage.
+
+Architecture should support future Firebase authentication.
+
+---------------------------------------
+
+Each user should have
+
+Name
+
+Email
+
+Avatar
+
+Gender
+
+Daily Goal
+
+Reminder Interval
+
+Voice Settings
+
+Current Streak
+
+Longest Streak
+
+Current Day Water
+
+Today's Sips
+
+Last Drink Time
+
+Achievements
+
+Hydration History
+
+Weekly Statistics
+
+Monthly Statistics
+
+Settings
+
+---------------------------------------
+
+Dashboard
+
+Replace placeholder dashboard with a complete hydration dashboard.
+
+Sections
+
+Welcome
+
+Today's Progress
+
+Current Streak
+
+Longest Streak
+
+Today's Sips
+
+Today's Water
+
+Goal Percentage
+
+Today's Timeline
+
+Weekly Graph
+
+Monthly Graph
+
+Hydration Score
+
+Achievements
+
+Reminder Status
+
+Quick Add Water
+
+Custom Water
+
+Last Reminder
+
+Last Drink
+
+Next Reminder
+
+Recent Achievements
+
+Hydration Tips
+
+---------------------------------------
+
+Data
+
+Every click on
+
+"I Drank"
+
+must immediately
+
+Increase today's sips.
+
+Increase today's water.
+
+Update timeline.
+
+Update streak.
+
+Save to user profile.
+
+Persist after application restart.
+
+---------------------------------------
+
+Daily Reset
+
+At midnight
+
+Create a history record.
+
+Reset
+
+Today's Water
+
+Today's Sips
+
+Timeline
+
+Keep streak if daily goal was achieved.
+
+---------------------------------------
+
+Use reusable architecture.
+
+Authentication must be separated from hydration logic.
+
+Only implement Task 11.
+---------------------------------------------
+
+
+Fix Error 
+
+The dashboard crashes in the browser because window.api is undefined.
+
+Error:
+
+Cannot read properties of undefined (reading 'sendReminderSync')
+
+DashboardPage.tsx line 104.
+
+Fix this by making all Electron API calls optional.
+
+Before calling
+
+window.api.sendReminderSync()
+
+check that
+
+window.api
+
+exists.
+
+Example
+
+if (window.api?.sendReminderSync) {
+    window.api.sendReminderSync(...)
+}
+
+Provide browser-safe fallbacks.
+
+The dashboard must continue working even when Electron APIs are unavailable.
+
+Do not modify any other functionality.
+
+Only fix the browser compatibility issue.
+
+-------------------------------------
+TASK 12
+Redesign the dashboard.
+
+The dashboard should become a modern hydration analytics dashboard.
+
+Do not prioritize settings.
+
+The first screen should immediately show
+
+Today's Water
+
+Today's Sips
+
+Progress Ring
+
+Current Streak
+
+Longest Streak
+
+Last Drink
+
+Next Reminder
+
+Hydration Score
+
+Timeline
+
+Weekly Chart
+
+Monthly Statistics
+
+Achievements
+
+Only move settings to a separate Settings page.
+
+Use beautiful glassmorphism cards and premium UI.
+
+Focus on data visualization.
+
+---------------------------------------
+
+Final Instructions
+Read the entire instructions.md file first and follow the project architecture already defined.
+
+Do NOT redesign the project from scratch.
+
+Preserve the current UI, styling, animations and project structure wherever possible.
+
+Your task is to identify and fix the existing issues without breaking any working functionality.
+
+==================================
+1. USER AUTHENTICATION
+==================================
+
+Fix the authentication flow.
+
+After signup or login:
+
+- Store the user profile correctly.
+- Display the logged-in user's own name everywhere.
+- Remove any hardcoded names.
+- Persist the user after application restart.
+
+==================================
+2. USER SETTINGS
+==================================
+
+Allow every user to configure:
+
+- Name
+- Daily Water Goal
+- Reminder Interval
+- Avatar / Character
+- Notification Sound
+- Voice Settings (if implemented)
+
+Persist everything using LocalStorage.
+
+The dashboard and reminder system must always use these saved settings.
+
+==================================
+3. REMINDER ENGINE
+==================================
+
+The reminder popup previously worked but no longer appears.
+
+Find the root cause.
+
+Do NOT rewrite the reminder system.
+
+Fix the existing implementation.
+
+Verify that:
+
+- timer starts correctly
+- timer resets correctly
+- reminder appears when expected
+- reminder closes correctly
+- reminder restarts correctly
+
+==================================
+4. REMINDER INTERVALS
+==================================
+
+There are duplicate reminder options.
+
+The UI currently shows incorrect reminder intervals.
+
+Clean up the reminder options.
+
+Create two modes.
+
+TEST MODE
+
+- 2 minutes
+- 5 minutes
+- 10 minutes
+- 15 minutes
+
+NORMAL MODE
+
+- 30 minutes
+- 45 minutes
+- 1 hour
+- 2 hours
+
+Do not show duplicate entries.
+
+==================================
+5. DESKTOP REMINDER
+==================================
+
+The reminder should work while the user is using another application.
+
+Use Electron correctly.
+
+The reminder should appear above the desktop applications.
+
+The reminder should NOT depend on the dashboard being focused.
+
+If the dashboard is minimized, the reminder should still appear.
+
+Use Electron BrowserWindow / Overlay architecture already described in instructions.md.
+
+==================================
+6. AVATAR SYSTEM
+==================================
+
+Keep the avatar selection feature.
+
+When the reminder appears:
+
+Display the user's selected avatar.
+
+The avatar should animate smoothly.
+
+Do not use placeholders.
+
+==================================
+7. FUTURE VIDEO SUPPORT
+==================================
+
+Prepare the reminder component so animated avatar videos can easily replace the current image.
+
+Create a reusable AvatarRenderer component.
+
+It should support:
+
+- PNG
+- GIF
+- MP4
+- WEBM
+
+I will later provide two AI-generated avatar videos.
+
+Do NOT implement fake videos.
+
+Only prepare the architecture.
+
+==================================
+8. BUG FIXES
+==================================
+
+Search the project for:
+
+broken imports
+
+duplicate timers
+
+duplicate reminder intervals
+
+unused reminder state
+
+stale localStorage keys
+
+hardcoded values
+
+window.api issues
+
+Electron IPC issues
+
+Fix all of them.
+
+==================================
+9. CODE QUALITY
+==================================
+
+Do NOT rewrite working components.
+
+Only refactor where necessary.
+
+Keep reusable architecture.
+
+Keep TypeScript.
+
+Keep Tailwind.
+
+Keep Electron.
+
+Keep React best practices.
+
+==================================
+10. FINAL VERIFICATION
+==================================
+
+Verify:
+
+✓ Login works
+
+✓ Signup works
+
+✓ User name updates correctly
+
+✓ Reminder interval saves
+
+✓ Avatar saves
+
+✓ Reminder popup appears
+
+✓ Reminder resets correctly
+
+✓ Desktop reminder works
+
+✓ LocalStorage works
+
+✓ No duplicate reminder options
+
+✓ No console errors
+
+Provide a summary of every file modified and explain why each change was made.

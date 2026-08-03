@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#dbeefe"/>
+      <stop offset="100%" stop-color="#a7d3fb"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6b4432"/>
+      <stop offset="100%" stop-color="#3f281e"/>
+    </linearGradient>
+    <linearGradient id="blazer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="url(#bg)"/>
+  <circle cx="100" cy="62" r="30" fill="url(#hair)"/>
+  <path d="M60 92 C58 56 142 56 140 92 L142 128 C142 150 136 162 130 170 L70 170 C64 162 58 150 58 128 Z" fill="url(#hair)"/>
+  <ellipse cx="100" cy="106" rx="38" ry="42" fill="#ffe3d0"/>
+  <path d="M60 100 Q100 58 140 100 Q126 82 100 82 Q74 82 60 100 Z" fill="url(#hair)"/>
+  <circle cx="85" cy="110" r="4" fill="#2d1b12"/>
+  <circle cx="115" cy="110" r="4" fill="#2d1b12"/>
+  <circle cx="86.5" cy="108.5" r="1.3" fill="#fff"/>
+  <circle cx="116.5" cy="108.5" r="1.3" fill="#fff"/>
+  <path d="M90 126 Q100 136 110 126" stroke="#c2563a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="78" cy="122" rx="6" ry="3.5" fill="#ffb3a7" opacity="0.7"/>
+  <ellipse cx="122" cy="122" rx="6" ry="3.5" fill="#ffb3a7" opacity="0.7"/>
+  <path d="M72 152 L78 172 Q100 182 122 172 L128 152 Q100 158 72 152 Z" fill="url(#blazer)"/>
+  <path d="M94 154 L100 170 L106 154 Z" fill="#f9fafb"/>
+  <rect x="132" y="120" width="30" height="40" rx="8" fill="#e0f2fe" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="134" y="126" width="26" height="22" rx="4" fill="url(#water)"/>
+  <path d="M146 120 L152 108 L155 118 Z" fill="#93c5fd"/>
+</svg>
