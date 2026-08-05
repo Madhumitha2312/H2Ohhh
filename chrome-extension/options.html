@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H2Ohhh Companion - Options</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="options">
+  <main class="wrap">
+    <header class="bar">
+      <span class="logo">💧</span>
+      <span class="brand">H2Ohhh Companion Options</span>
+      <span id="status-dot" class="dot off" title="Not synced with website"></span>
+    </header>
+
+    <section class="card">
+      <div class="row between">
+        <label class="field-label" for="master-toggle">Reminder</label>
+        <button id="master-toggle" class="switch" role="switch" aria-checked="false"><span class="knob"></span></button>
+      </div>
+      <p class="muted small">When ON, the animated character reminds you to drink water on every website.</p>
+    </section>
+
+    <section class="card">
+      <h3 class="field-label">Reminder interval</h3>
+      <div class="interval-grid">
+        <button class="opt" data-min="2">2 min</button>
+        <button class="opt" data-min="5">5 min</button>
+        <button class="opt" data-min="10">10 min</button>
+        <button class="opt" data-min="15">15 min</button>
+        <button class="opt" data-min="30">30 min</button>
+        <button class="opt" data-min="45">45 min</button>
+        <button class="opt" data-min="60">1 hr</button>
+        <button class="opt" data-min="120">2 hr</button>
+      </div>
+      <div class="row custom-row">
+        <input id="custom-input" type="number" min="1" step="1" placeholder="Custom minutes" />
+        <button id="custom-apply" class="btn">Use custom</button>
+      </div>
+      <p class="muted small">Current: <span id="interval-label" class="chip">—</span></p>
+    </section>
+
+    <section class="card">
+      <h3 class="field-label">Character</h3>
+      <div class="avatar-row">
+        <button class="avatar-opt" data-avatar="girl"><span class="avatar-emoji">👧</span><span>Girl</span></button>
+        <button class="avatar-opt" data-avatar="boy"><span class="avatar-emoji">👦</span><span>Boy</span></button>
+      </div>
+      <p class="muted small">Girl = girl-reminder.mp4 · Boy = boy-reminder.mp4</p>
+    </section>
+
+    <section class="card">
+      <div class="row between">
+        <label class="field-label" for="voice-toggle">Voice reminder</label>
+        <button id="voice-toggle" class="switch" role="switch" aria-checked="true"><span class="knob"></span></button>
+      </div>
+      <div class="sliders" id="voice-sliders">
+        <label class="slider-row">Volume
+          <input id="v-volume" type="range" min="0" max="1" step="0.1" value="1" />
+          <span id="v-volume-val" class="chip">1.0</span>
+        </label>
+        <label class="slider-row">Rate
+          <input id="v-rate" type="range" min="0.5" max="2" step="0.1" value="0.95" />
+          <span id="v-rate-val" class="chip">0.95</span>
+        </label>
+        <label class="slider-row">Pitch
+          <input id="v-pitch" type="range" min="0.5" max="2" step="0.1" value="1" />
+          <span id="v-pitch-val" class="chip">1.0</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3 class="field-label">Notification sound</h3>
+      <div class="sound-row">
+        <button class="opt" data-sound="waterdrop">💧 Water Drop</button>
+        <button class="opt" data-sound="ocean">🌊 Ocean</button>
+        <button class="opt" data-sound="bell">🔔 Bell</button>
+        <button class="opt" data-sound="none">🔇 None</button>
+      </div>
+    </section>
+
+    <section class="card center">
+      <div class="muted">Next reminder</div>
+      <div id="countdown" class="countdown">—</div>
+      <div id="sync-note" class="muted small"></div>
+    </section>
+
+    <footer class="actions">
+      <button id="open-site" class="btn ghost">Open H2Ohhh website to sync</button>
+      <button id="force-sync" class="btn ghost">Refresh from website</button>
+    </footer>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

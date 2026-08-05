@@ -3,6 +3,9 @@ import type { ReminderOption } from '../types'
 export const APP_NAME = 'H2Ohhh'
 export const TAGLINE = 'Turning Sips Into Streaks'
 
+export const DESKTOP_DOWNLOAD_URL =
+  'https://github.com/tanu234234/H2Ohhh/releases/latest/download/H2Ohhh%20Setup%201.0.0.exe'
+
 export const STORAGE_KEYS = {
   users: 'h2ohhh:users',
   session: 'h2ohhh:session',
@@ -11,6 +14,8 @@ export const STORAGE_KEYS = {
 } as const
 
 export const TEST_INTERVALS: ReminderOption[] = [
+  { minutes: 0.5, label: '30 Seconds' },
+  { minutes: 1, label: '1 Minute' },
   { minutes: 2, label: '2 Minutes' },
   { minutes: 5, label: '5 Minutes' },
   { minutes: 10, label: '10 Minutes' },
@@ -131,6 +136,7 @@ export function greetingForTime(date: Date = new Date()): string {
 }
 
 export function minutesLabel(minutes: number): string {
+  if (minutes < 1) return `Every ${minutes * 60} sec`
   if (minutes < 60) return `Every ${minutes} min`
   const h = minutes / 60
   return `Every ${Number.isInteger(h) ? h : h.toFixed(1)} hr`

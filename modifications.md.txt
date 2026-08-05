@@ -1,32 +1,26 @@
-Read the entire project first before modifying anything.
+Do not redesign or rewrite the extension.
 
-The project is an Electron + React (electron-vite) application.
+The reminder system works:
+- voice works on ChatGPT
+- reminder alarm works
+- website sync works
 
-DO NOT modify:
-- UI
-- Dashboard
-- Login
-- Signup
-- Reminder system
-- Overlay
-- Desktop notification
-- Voice
-- Animations
-- Electron functionality
+The ONLY issue is:
+the animated overlay is visible only on the H2Ohhh website.
 
-The only goal is to make the React frontend deployable on Vercel.
+Instrument content.js for debugging.
 
-Tasks:
+Log:
 
-1. Keep the Electron desktop app completely unchanged.
-2. Configure the React renderer as a standalone Vite web build.
-3. Create a build script (example: build:web) that builds ONLY the React renderer.
-4. Ensure the web build outputs a standard "dist" directory.
-5. Update package.json scripts accordingly.
-6. Do NOT remove Electron support.
-7. Tell me exactly:
-   - Build Command for Vercel
-   - Output Directory
-   - Any Vercel settings I must change.
+1. "content.js loaded"
+2. "SHOW_REMINDER received"
+3. "creating overlay"
+4. "overlay appended"
+5. "fetch success" / "fetch failed"
+6. "loadeddata"
+7. "video.play success"
+8. "video.play failed"
+9. Any exception with console.error instead of silent catch blocks.
 
-Do not change the UI or any existing features.
+Do not change functionality.
+Only add logging.

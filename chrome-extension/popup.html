@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>H2Ohhh</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="popup">
+  <header class="bar">
+    <span class="logo">💧</span>
+    <span class="brand">H2Ohhh Companion</span>
+    <span id="status-dot" class="dot off" title="Not synced with website"></span>
+  </header>
+
+  <section class="card">
+    <div class="row between">
+      <label class="field-label">Reminder</label>
+      <button id="toggle-btn" class="switch" role="switch" aria-checked="false">
+        <span class="knob"></span>
+      </button>
+    </div>
+
+    <div class="row between" style="margin-top: 10px">
+      <span class="muted">Remind me every</span>
+      <span id="interval-label" class="chip">30 min</span>
+    </div>
+    <div class="interval-grid">
+      <button class="opt" data-min="2">2 min</button>
+      <button class="opt" data-min="5">5 min</button>
+      <button class="opt" data-min="15">15 min</button>
+      <button class="opt" data-min="30">30 min</button>
+      <button class="opt" data-min="60">1 hr</button>
+      <button class="opt" data-min="custom">Custom</button>
+    </div>
+    <div id="custom-wrap" class="custom hidden">
+      <input id="custom-input" type="number" min="1" step="1" placeholder="Minutes" />
+      <button id="custom-apply" class="btn">Set</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <label class="field-label">Character</label>
+    <div class="avatar-row">
+      <button class="avatar-opt" data-avatar="girl">
+        <span class="avatar-emoji">👧</span>
+        <span>Girl</span>
+      </button>
+      <button class="avatar-opt" data-avatar="boy">
+        <span class="avatar-emoji">👦</span>
+        <span>Boy</span>
+      </button>
+    </div>
+
+    <div class="row between" style="margin-top: 12px">
+      <label class="field-label" for="voice-toggle">Voice reminder</label>
+      <button id="voice-toggle" class="switch" role="switch" aria-checked="true">
+        <span class="knob"></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="card center">
+    <div class="muted">Next reminder</div>
+    <div id="countdown" class="countdown">—</div>
+    <div id="sync-note" class="muted small"></div>
+  </section>
+
+  <footer class="actions">
+    <button id="open-site" class="btn ghost">Open H2Ohhh website</button>
+    <button id="open-options" class="btn ghost">Options</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

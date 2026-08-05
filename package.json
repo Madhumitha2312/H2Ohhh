@@ -11,6 +11,8 @@
     "build": "vite build",
     "build:web": "vite build",
     "build:electron": "electron-vite build",
+    "build:installer": "npm run build:electron && electron-builder --win",
+    "trust:cert": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/trust-dev-cert.ps1",
     "preview": "vite preview",
     "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
     "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
@@ -29,6 +31,7 @@
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^5.2.0",
     "electron": "^43.2.0",
+    "electron-builder": "^26.15.3",
     "electron-vite": "^5.0.0",
     "tailwindcss": "^4.3.3",
     "typescript": "~5.9.3",
@@ -37,5 +40,30 @@
   "allowScripts": {
     "esbuild@0.25.12": true,
     "esbuild@0.28.1": true
+  },
+  "build": {
+    "appId": "com.h2ohhh.desktop",
+    "productName": "H2Ohhh",
+    "files": [
+      "out/**"
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "H2Ohhh"
+    }
   }
 }

@@ -8,3 +8,5 @@ release
 !.vscode/extensions.json
 .idea
 *.tsbuildinfo
+build/codesign-dev.pfx
+build/codesign-dev.cer

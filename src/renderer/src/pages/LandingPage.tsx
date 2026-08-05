@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { AnimatedBackground } from '../components/AnimatedBackground'
 import { BrandLogo } from '../components/BrandLogo'
 import { useAuth } from '../hooks/useAuth'
-import { APP_NAME, TAGLINE } from '../utils/constants'
+import { APP_NAME, DESKTOP_DOWNLOAD_URL, TAGLINE } from '../utils/constants'
 
 export function LandingPage(): React.JSX.Element {
   const navigate = useNavigate()
@@ -17,6 +17,7 @@ export function LandingPage(): React.JSX.Element {
   }
 
   const navLinks = [
+    { label: 'Setup', href: '#setup' },
     { label: 'About', href: '#about' },
     { label: 'Features', href: '#features' },
     { label: 'Contact', href: '#contact' }
@@ -76,6 +77,14 @@ export function LandingPage(): React.JSX.Element {
           <button onClick={handleGetStarted} className="btn-primary text-base">
             Get Started
           </button>
+          <a
+            href={DESKTOP_DOWNLOAD_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-primary text-base"
+          >
+            ⬇ Download for Windows
+          </a>
           <a href="#features" className="btn-ghost text-base">
             Learn More
           </a>
@@ -95,6 +104,57 @@ export function LandingPage(): React.JSX.Element {
           ))}
         </div>
       </main>
+
+      <section id="setup" className="relative z-10 mx-auto mt-16 w-full max-w-4xl px-6 pb-8">
+        <h2 className="text-center text-3xl font-extrabold tracking-tight text-slate-800">
+          Before You Start
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-slate-500">
+          {APP_NAME} can remind you two ways — pick what fits how you work. Your reminder never fires unless you
+          follow the right setup below.
+        </p>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="glass rounded-3xl p-6 text-left">
+            <h3 className="text-base font-bold text-slate-700">🌐 In Your Browser</h3>
+            <p className="mt-2 text-sm text-slate-500">
+              Install the <strong>H2Ohhh Chrome Extension</strong> to get reminders on any website you visit —
+              YouTube, ChatGPT, Gmail and more. Works while you browse.
+            </p>
+            <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-slate-500">
+              <li>Install the extension and pin it to your toolbar.</li>
+              <li>Open its popup and sign in with your account.</li>
+              <li>Turn reminders ON — they appear inside your active tab.</li>
+            </ul>
+          </div>
+
+          <div className="glass rounded-3xl p-6 text-left">
+            <h3 className="text-base font-bold text-slate-700">🖥️ Over Every Screen</h3>
+            <p className="mt-2 text-sm text-slate-500">
+              Want reminders above <strong>every app on your computer</strong> — even when your browser is closed?
+              Install the <strong>H2Ohhh Desktop App</strong> (Windows). Each person who wants full-desktop reminders
+              needs the desktop app on their own PC.
+            </p>
+            <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-slate-500">
+              <li>Download and open the desktop app, then sign in.</li>
+              <li>Enable reminders and pick a short test interval (30 sec / 1 min).</li>
+              <li>Close the window — the app stays running in your system tray (💧).</li>
+              <li>Right-click the tray icon → <em>Start at login</em> so it is always on.</li>
+            </ul>
+            <a
+              href={DESKTOP_DOWNLOAD_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary mt-5 inline-block text-sm"
+            >
+              ⬇ Download the H2Ohhh Desktop App
+            </a>
+            <p className="mt-3 text-sm font-semibold text-blue-600">
+              The animated character + voice pops up over your whole desktop on every reminder.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <footer id="about" className="relative z-10 mt-12 px-6 py-8 text-center">
         <p className="text-sm text-slate-500">

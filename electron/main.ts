@@ -16,6 +16,8 @@ let pendingOverlayShow: {
   voice?: { enabled: boolean; volume: number; rate: number; pitch: number }
 } | null = null
 let _tray: Tray | null = null
+let isQuitting = false
+const LAUNCH_HIDDEN = process.argv.includes('--hidden')
 let remindersPaused = false
 let reminderState: {
   intervalMinutes: number
@@ -74,7 +76,7 @@ function createTrayIcon(size = 32): Electron.NativeImage {
   return nativeImage.createFromBitmap(buffer, { width: size, height: size })
 }
 
-function createMainWindow(): BrowserWindow {
+function createMainWindow(showOnReady = true): BrowserWindow {
   const win = new BrowserWindow({
     width: 1280,
     height: 830,
@@ -92,8 +94,17 @@ function createMainWindow(): BrowserWindow {
     }
   })
 
+  // Closing the window hides the app to the system tray instead of quitting,
+  // so reminders keep firing over the whole desktop. Use "Exit" to quit.
+  win.on('close', (event) => {
+    if (!isQuitting) {
+      event.preventDefault()
+      win.hide()
+    }
+  })
+
   win.on('ready-to-show', () => {
-    win.show()
+    if (showOnReady) win.show()
   })
 
   if (process.env['ELECTRON_RENDERER_URL']) {
@@ -198,11 +209,17 @@ function sendToMain(channel: string, payload: unknown): void {
   }
 }
 
+function getOrCreateMainWindow(): BrowserWindow {
+  if (mainWindow && !mainWindow.isDestroyed()) return mainWindow
+  mainWindow = createMainWindow()
+  return mainWindow
+}
+
 function showMainWindow(): void {
-  if (!mainWindow) return
-  if (mainWindow.isMinimized()) mainWindow.restore()
-  mainWindow.show()
-  mainWindow.focus()
+  const win = getOrCreateMainWindow()
+  if (win.isMinimized()) win.restore()
+  win.show()
+  win.focus()
 }
 
 function buildTray(): Tray {
@@ -211,28 +228,48 @@ function buildTray(): Tray {
   t.setToolTip('H2Ohhh - Turning Sips Into Streaks')
 
   const refreshMenu = (): void => {
-    t.setContextMenu(
-      Menu.buildFromTemplate([
-        { label: 'Open', click: () => showMainWindow() },
-        {
-          label: remindersPaused ? 'Resume Reminders' : 'Pause Reminders',
-          click: () => {
-            remindersPaused = !remindersPaused
-            sendToMain('reminder:paused', remindersPaused)
-            refreshMenu()
-          }
-        },
-        { label: 'Drink Water', click: () => sendToMain('hydration:add', { amount: 250 }) },
-        { label: 'Settings', click: () => showMainWindow() },
-        { type: 'separator' },
-        {
-          label: 'Exit',
-          click: () => {
-            app.quit()
-          }
+    const supportsLogin = process.platform === 'win32' || process.platform === 'darwin'
+    const loginItems = supportsLogin
+      ? app.getLoginItemSettings()
+      : { openAtLogin: false }
+    const items: Electron.MenuItemConstructorOptions[] = [
+      { label: 'Open', click: () => showMainWindow() },
+      {
+        label: remindersPaused ? 'Resume Reminders' : 'Pause Reminders',
+        click: () => {
+          remindersPaused = !remindersPaused
+          sendToMain('reminder:paused', remindersPaused)
+          refreshMenu()
         }
-      ])
+      },
+      { label: 'Drink Water', click: () => sendToMain('hydration:add', { amount: 250 }) },
+      { label: 'Settings', click: () => showMainWindow() }
+    ]
+    if (supportsLogin) {
+      items.push({
+        label: loginItems.openAtLogin ? 'Stop starting at login' : 'Start at login',
+        click: () => {
+          const next = !loginItems.openAtLogin
+          app.setLoginItemSettings({
+            openAtLogin: next,
+            openAsHidden: process.platform === 'darwin',
+            args: process.platform === 'win32' ? ['--hidden'] : []
+          })
+          refreshMenu()
+        }
+      })
+    }
+    items.push(
+      { type: 'separator' },
+      {
+        label: 'Exit',
+        click: () => {
+          isQuitting = true
+          app.quit()
+        }
+      }
     )
+    t.setContextMenu(Menu.buildFromTemplate(items))
   }
   refreshMenu()
 
@@ -311,24 +348,22 @@ app.whenReady().then(() => {
   app.on('second-instance', () => showMainWindow())
 
   registerIpc()
-  mainWindow = createMainWindow()
+  mainWindow = createMainWindow(!LAUNCH_HIDDEN)
   overlayWindow = createOverlayWindow()
   _tray = buildTray()
 
   app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      mainWindow = createMainWindow()
-    } else {
-      showMainWindow()
-    }
+    showMainWindow()
   })
 })
 
 app.on('window-all-closed', () => {
-  app.quit()
+  // Keep running in the tray so reminders fire over the whole desktop.
+  if (isQuitting) app.quit()
 })
 
 app.on('before-quit', () => {
+  isQuitting = true
   if (_tray) {
     _tray.destroy()
     _tray = null
