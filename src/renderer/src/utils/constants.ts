@@ -4,7 +4,7 @@ export const APP_NAME = 'H2Ohhh'
 export const TAGLINE = 'Turning Sips Into Streaks'
 
 export const DESKTOP_DOWNLOAD_URL =
-  'https://github.com/tanu234234/H2Ohhh/releases/latest/download/H2Ohhh%20Setup%201.0.0.exe'
+  'https://github.com/tanu234234/H2Ohhh/releases/latest/download/H2Ohhh.Setup.1.0.0.exe'
 
 export const STORAGE_KEYS = {
   users: 'h2ohhh:users',
