@@ -7,7 +7,7 @@ import { defineConfig } from 'vite'
 // The Electron desktop app keeps using electron.vite.config.ts.
 export default defineConfig({
   root: resolve(__dirname, 'src/renderer'),
-  base: '/',
+  base: '/H2Ohhh/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
